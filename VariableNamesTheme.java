@@ -23,8 +23,8 @@ public class VariableNamesTheme {
         char character = '\u0026';
         System.out.println("Переменная хранит символ " + character + "\n");
         String exception = "Exception in thread \"main\" java.io.FileNotFoundExcep" +
-                    "tion: C:\\Users\\Username\\Desktop\\test.txt (Системе не уд" +
-                    "ается найти указанный путь)";
+                "tion: C:\\Users\\Username\\Desktop\\test.txt (Системе не уд" +
+                "ается найти указанный путь)";
         System.out.println("Код ошибки \"" + exception + "\"" + "\n");
         String typeOfMessage = "TextMessage";
         System.out.println("Тип сообщения " + typeOfMessage + "\n");
@@ -70,7 +70,7 @@ public class VariableNamesTheme {
         int numQuantityLine2 = 345;
         int numQuantityLine3 = 567;
         System.out.printf("Количество чисел в каждой строке:\nПервая строка %d\nВто" +
-            "рая строка %d\nТретья строка %d\n\n", numQuantityLine1, numQuantityLine2, numQuantityLine3);
+                "рая строка %d\nТретья строка %d\n\n", numQuantityLine1, numQuantityLine2, numQuantityLine3);
 
         //Булевые
         System.out.println("2. boolean-переменные");
