@@ -1,79 +1,79 @@
 public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("1. Вывод характеристик компьютера");
+        // Объявление и присвоение значений для 8ми примитивных типов данных: 
+        // boolean, byte, short, char, int, long, float и double. 
+        boolean isRamExpandable = true;
+        System.out.println("Возможность расширения оперативной памяти " + isRamExpandable);
         byte quantityOfCores = 8;
         System.out.println("Количество ядер " + quantityOfCores + "шт.");
         short cpuRate = 2500;
         System.out.println("Базовая тактовая частота процессора " + cpuRate + "МГц");
-        byte ramVolume = 16;
-        System.out.println("Объем оперативной памяти " + ramVolume + "Гб");
-        short hddVolume = 512;
-        System.out.println("Объем жесткого диска " + hddVolume + "Гб");
-        float usbType = 3.2f;
         char usbTypeA = 'A';
-        System.out.println("Тип USB портов " + usbType + ", Type " + usbTypeA);
-        byte netSpeed = 1;
-        System.out.println("Скорость сетевого адаптера " + netSpeed + "Гбит/с");
+        System.out.println("Количество USB портов типа " + usbTypeA + ": 2");
+        float usbTypeC = 3.2f;
+        System.out.println("Количество USB портов типа " + usbTypeC + ": 4");
         long price = 9_223_372_036_854_775_807L;
         System.out.println("Стоимость " + price + " Тугриков");
-        boolean isRamExpandable = true;
-        System.out.println("Возможность расширения оперативной памяти " + isRamExpandable);
+        int ramVolume = 16;
+        System.out.println("Объем оперативной памяти " + ramVolume + "Гб");
         double osVersion = 12.23;
         System.out.println("Версия Операционной Системы Shliop-Shliop OS " + osVersion + "\n");
+        
         System.out.println("2. Расчет стоимости товара со скидкой");
-        int penPrice = 100;
         int bookPrice = 200;
         int discount = 11;
-        int summaryPrice = penPrice + bookPrice;
-        int discountedSummaryPrice = summaryPrice - ((penPrice + bookPrice) / 100 * discount);
-        System.out.println("Общая стоимость товаров без скидки = " + (penPrice + bookPrice) + "₽");
-        System.out.println("Сумма скидки = " + discount + "%");
-        System.out.println("Общая стоимость товаров со скидкой = " + discountedSummaryPrice + "₽\n");
+        int penPrice = 100;
+        int totalPrice = penPrice + bookPrice;
+        int discountPrice = totalPrice - (totalPrice / 100 * discount);
+        System.out.println("Общая стоимость товаров без скидки = " + totalPrice + "₽");
+        System.out.println("Сумма скидки = " + (totalPrice - discountPrice) + "₽");
+        System.out.println("Общая стоимость товаров со скидкой = " + discountPrice + "₽\n");
 
         System.out.println("3. Вывод слова JAVA");
-        System.out.println("   J    a  v     v  a    \n" + 
-                "   J   a a  v   v  a a  \n" + 
-                "J  J  aaaaa  V V  aaaaa \n" + 
+        System.out.println("   J    a  v     v  a\n" + 
+                "   J   a a  v   v  a a\n" + 
+                "J  J  aaaaa  V V  aaaaa\n" + 
                 " JJ  a     a  V  a     a\n");
 
         System.out.println("4. Вывод min и max значений целых числовых типов");
-        byte b =  Byte.MAX_VALUE;
-        short s = Short.MAX_VALUE;
-        int i = Integer.MAX_VALUE;
-        long l = Long.MAX_VALUE;
-        System.out.println("byte. Максимальное значение " + b);
-        System.out.println("byte. Инкремент на единицу " + (b + 1));
-        System.out.println("byte. Декремент на единицу " + (b - 1));
-        System.out.println("short. Максимальное значение " + s);
-        System.out.println("short. Инкремент на единицу " + (s + 1));
-        System.out.println("short. Декремент на единицу " + (s - 1));
-        System.out.println("int. Максимальное значение " + i);
-        System.out.println("int. Инкремент на единицу " + (i + 1));
-        System.out.println("int. Декремент на единицу " + (i - 1));
-        System.out.println("long. Максимальное значение " + l);
-        System.out.println("long. Инкремент на единицу " + (l + 1));
-        System.out.println("long. Декремент на единицу " + (l - 1));
+        byte byteMaxValue =  Byte.MAX_VALUE;
+        short shortMaxValue = Short.MAX_VALUE;
+        int intMaxValue = Integer.MAX_VALUE;
+        long longMaxValue = Long.MAX_VALUE;
+        System.out.println("byte. Максимальное значение " + byteMaxValue);
+        System.out.println("byte. Инкремент на единицу " + ++byteMaxValue);
+        System.out.println("byte. Декремент на единицу " + --byteMaxValue);
+        System.out.println("short. Максимальное значение " + shortMaxValue);
+        System.out.println("short. Инкремент на единицу " + ++shortMaxValue);
+        System.out.println("short. Декремент на единицу " + --shortMaxValue);
+        System.out.println("int. Максимальное значение " + intMaxValue);
+        System.out.println("int. Инкремент на единицу " + ++intMaxValue);
+        System.out.println("int. Декремент на единицу " + --intMaxValue);
+        System.out.println("long. Максимальное значение " + longMaxValue);
+        System.out.println("long. Инкремент на единицу " + ++longMaxValue);
+        System.out.println("long. Декремент на единицу " + --longMaxValue + "\n");
 
-        System.out.println("\n5. Перестановка значений переменных");
-        int digit1 = 7;
-        int digit2 = 5;
+        System.out.println("5. Перестановка значений переменных");
+        int a = 2;
+        int b = 5;
         System.out.println("a. Перестановка с помощью третьей переменной");
-        System.out.printf("Исходные значения переменных: %d, %d\n", digit1, digit2);
-        int temp = digit1;
-        digit1 = digit2;
-        digit2 = temp;
-        System.out.printf("Новые значения переменных с помощью третьей переменной: %d, %d\n", digit1, digit2);
+        System.out.printf("Исходные значения переменных: %d, %d\n", a, b);
+        int tmp = a;
+        a = b;
+        b = tmp;
+        System.out.printf("Новые значения переменных с помощью третьей переменной: %d, %d\n", a, b);
         System.out.printf("b. Перестановка с помощью арифметических операций\n" +
-                "Исходные значения переменных: %d, %d\n", digit1, digit2);
+                 "Исходные значения переменных: %d, %d\n", a, b);
         System.out.println("Новые значения переменных с помощью вычисления и сложения: " + 
-                + (temp = digit1 - (digit1 - digit2)) + ", " + (digit2 + (digit1 - digit2)));
+                + (a - (a - b)) + ", " + (b + (a - b)));
         System.out.printf("c. Перестановка с помощью побитовой операции ^\n" + 
-                "Исходные значения переменных: %d, %d\n", digit1, digit2);
-        digit1 ^= digit2;
-        digit2 ^= digit1;
-        digit1 ^= digit2;
+                "Исходные значения переменных: %d, %d\n", a, b);
+        a ^= b;
+        b ^= a;
+        a ^= b;
         System.out.println("Новые значения переменных с помощью побитовой операции ^: " +
-                + digit1 + ", " + digit2 + "\n");
+                + a + ", " + b + "\n");
 
         System.out.println("6. Вывод символов и их кодов");
         char dollar = '$';
@@ -82,11 +82,11 @@ public class VariablesTheme {
         char verticalBar = '|';
         char tilde = '~';
         System.out.println("Код символа - Символ\n" +
-                "         " + (int)dollar + " - " + dollar + "\n" +
-                "         " + (int)asterisk + " - " + asterisk + "\n" +
-                "         " + (int)atSign + " - " + atSign + "\n"+
-                "        " + (int)verticalBar + " - " + verticalBar + "\n" +
-                "        " + (int)tilde + " - " + tilde + "\n");
+                "\t" + (int) dollar + " - " + dollar + "\n" +
+                "\t" + (int) asterisk + " - " + asterisk + "\n" +
+                "\t" + (int) atSign + " - " + atSign + "\n"+
+                "\t" + (int) verticalBar + " - " + verticalBar + "\n" +
+                "\t" + (int) tilde + " - " + tilde + "\n");
 
         System.out.println("7. Вывод в консоль ASCII-арт Дюка");
         char slash = '/';
@@ -121,13 +121,3 @@ public class VariablesTheme {
         System.out.printf("%d:%d:%d", hours, minutes, finalSeconds);
     }
 }
-
-
-
-
-
-
-
-
-
-
