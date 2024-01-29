@@ -37,22 +37,25 @@ public class VariablesTheme {
                 " JJ  a     a  V  a     a\n");
 
         System.out.println("4. Вывод min и max значений целых числовых типов");
-        byte byteMaxValue =  Byte.MAX_VALUE;
-        short shortMaxValue = Short.MAX_VALUE;
-        int intMaxValue = Integer.MAX_VALUE;
-        long longMaxValue = Long.MAX_VALUE;
-        System.out.println("byte. Максимальное значение " + byteMaxValue);
-        System.out.println("byte. Инкремент на единицу " + ++byteMaxValue);
-        System.out.println("byte. Декремент на единицу " + --byteMaxValue);
-        System.out.println("short. Максимальное значение " + shortMaxValue);
-        System.out.println("short. Инкремент на единицу " + ++shortMaxValue);
-        System.out.println("short. Декремент на единицу " + --shortMaxValue);
-        System.out.println("int. Максимальное значение " + intMaxValue);
-        System.out.println("int. Инкремент на единицу " + ++intMaxValue);
-        System.out.println("int. Декремент на единицу " + --intMaxValue);
-        System.out.println("long. Максимальное значение " + longMaxValue);
-        System.out.println("long. Инкремент на единицу " + ++longMaxValue);
-        System.out.println("long. Декремент на единицу " + --longMaxValue + "\n");
+        byte byteMax =  Byte.MAX_VALUE;
+        System.out.println("byte. Максимальное значение " + byteMax);
+        System.out.println("byte. Инкремент на единицу " + ++byteMax);
+        System.out.println("byte. Декремент на единицу " + --byteMax);
+
+        short shortMax = Short.MAX_VALUE;
+        System.out.println("short. Максимальное значение " + shortMax);
+        System.out.println("short. Инкремент на единицу " + ++shortMax);
+        System.out.println("short. Декремент на единицу " + --shortMax);
+        
+        int intMax = Integer.MAX_VALUE;
+        System.out.println("int. Максимальное значение " + intMax);
+        System.out.println("int. Инкремент на единицу " + ++intMax);
+        System.out.println("int. Декремент на единицу " + --intMax);
+        
+        long longMax = Long.MAX_VALUE;
+        System.out.println("long. Максимальное значение " + longMax);
+        System.out.println("long. Инкремент на единицу " + ++longMax);
+        System.out.println("long. Декремент на единицу " + --longMax + "\n");
 
         System.out.println("5. Перестановка значений переменных");
         int a = 2;
@@ -62,6 +65,9 @@ public class VariablesTheme {
         int tmp = a;
         a = b;
         b = tmp;
+
+        a = 2;
+        b = 5;
         System.out.printf("Новые значения переменных с помощью третьей переменной: %d, %d\n", a, b);
         System.out.printf("b. Перестановка с помощью арифметических операций\n" +
                  "Исходные значения переменных: %d, %d\n", a, b);
@@ -94,10 +100,10 @@ public class VariablesTheme {
         char underline = '_';
         char leftParanthesis = '(';
         char rightParanthesis = ')';
-        System.out.println("    " + slash + backSlash + "    \n" +
-                "   " + slash + "  " + backSlash + "   \n" +
-                "  " + slash + underline + leftParanthesis + " " + rightParanthesis + backSlash + "  \n" +
-                " " + slash + "      " + backSlash + " \n" +
+        System.out.println("    " + slash + backSlash + "\n" +
+                "   " + slash + "  " + backSlash + "\n" +
+                "  " + slash + underline + leftParanthesis + " " + rightParanthesis + backSlash + "\n" +
+                " " + slash + "      " + backSlash + "\n" +
                 "" + slash + underline + underline + underline + 
                 underline + slash + backSlash + underline + underline + backSlash + "\n");
 
@@ -114,10 +120,10 @@ public class VariablesTheme {
                 "Произведение = " + (hundreds * tens * ones) + "\n");
 
         System.out.println("9. Вывод времени");
-        int seconds = 86399;
-        int hours = seconds / 3_600;
-        int minutes = (seconds / 60) % 60;
-        int finalSeconds = seconds % 60;
-        System.out.printf("%d:%d:%d", hours, minutes, finalSeconds);
+        int ss = 86399;
+        int hh = ss / 3_600;
+        int mm = (ss / 60) % 60;
+        int finalss = ss % 60;
+        System.out.printf("%d:%d:%d", hh, mm, finalss);
     }
 }
