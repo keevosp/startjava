@@ -168,7 +168,7 @@ public class IfElseStatementTheme {
         int rentYear = rentMonth * 12;
         int productionCostYear = productionCostMonth * 12;
         int profit = salesYear - (productionCostYear + rentYear);
-        if (profit < 0) {
+        if (profit <= 0) {
             System.out.printf("Прибыль за год: %d руб.\n", profit);
         } if (profit > 0) {
             System.out.printf("Прибыль за год: +%d руб.\n", profit);
