@@ -48,8 +48,8 @@ public class VariableNamesTheme {
         System.out.println("Тип сообщения " + typeOfMessage + "\n");
         
         // число нулей
-        int quantityZero = 34;
-        System.out.println("Число нулей " + quantityZero + "\n");
+        int quantityZeros = 34;
+        System.out.println("Число нулей " + quantityZeros + "\n");
         
         // уникальное число
         int uniqueNum = 7;
@@ -160,8 +160,8 @@ public class VariableNamesTheme {
         System.out.println("3. Аббревиатуры");
         
         // старый universally unique identifier
-        String oldUud = "blablabla1234";
-        System.out.println("Старый universally unique identifier: " + oldUud + "\n");
+        String oldUuid = "blablabla1234";
+        System.out.println("Старый universally unique identifier: " + oldUuid + "\n");
         
         // производитель оперативной памяти
         String ramManufacturer = "Kingston";

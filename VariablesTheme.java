@@ -69,10 +69,12 @@ public class VariablesTheme {
         a = 2;
         b = 5;
         System.out.printf("Новые значения переменных с помощью третьей переменной: %d, %d\n", a, b);
+        a = (a - (a - b));
+        b = (b + (a - b));
         System.out.printf("b. Перестановка с помощью арифметических операций\n" +
                  "Исходные значения переменных: %d, %d\n", a, b);
         System.out.println("Новые значения переменных с помощью вычисления и сложения: " + 
-                + (a - (a - b)) + ", " + (b + (a - b)));
+                + a + ", " + b);
         System.out.printf("c. Перестановка с помощью побитовой операции ^\n" + 
                 "Исходные значения переменных: %d, %d\n", a, b);
         a ^= b;
@@ -110,7 +112,7 @@ public class VariablesTheme {
         System.out.println("8. Вывод количества сотен, десятков и единиц числа");
         int num = 123;
         int hundreds = num / 100;
-        int tens = (num % 100)/ 10;
+        int tens = (num % 100) / 10;
         int ones = num % 10;
         System.out.println("Число " + num + "содержит: \n" +
                 "  сотен - " + hundreds + "\n" +
@@ -120,10 +122,10 @@ public class VariablesTheme {
                 "Произведение = " + (hundreds * tens * ones) + "\n");
 
         System.out.println("9. Вывод времени");
-        int ss = 86399;
-        int hh = ss / 3_600;
-        int mm = (ss / 60) % 60;
-        int finalss = ss % 60;
-        System.out.printf("%d:%d:%d", hh, mm, finalss);
+        int givenSeconds = 86399;
+        int hh = givenSeconds / 3_600;
+        int mm = (givenSeconds / 60) % 60;
+        int ss = givenSeconds % 60;
+        System.out.printf("%d:%d:%d", hh, mm, ss);
     }
 }
