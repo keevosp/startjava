@@ -70,28 +70,28 @@ public class IfElseStatementTheme {
         int tensC = c % 100 / 10;
         int onesC = c % 10;
         
-        int d = 156;
+        int d = 123;
         int hundredsD = d / 100;
         int tensD = d % 100 /10;
         int onesD = d % 10;
 
         if (hundredsC == hundredsD || tensC == tensD || onesC == onesD) {
-            System.out.printf("Исходные числа: %d и %d", c, d);
-            System.out.print("Одинаковые цифры в числах:");
+            System.out.printf("Исходные числа: %d и %d\n", c, d);
+            System.out.print("Одинаковые цифры в числах: \n");
             if (hundredsC == hundredsD) {
-                System.out.printf("%d и %d в разряде \"сотни\"", hundredsC, hundredsD);
+                System.out.printf("%d и %d в разряде \"сотни\"\n", hundredsC, hundredsD);
             }
             if (tensC == tensD) {
-                System.out.printf("%d и %d в разряде \"десятки\"", tensC, tensD);
+                System.out.printf("%d и %d в разряде \"десятки\"\n", tensC, tensD);
             }
             if (onesC == onesD) {
-                System.out.printf("%d и %d в разряде \"единицы\"", onesC, onesD);
+                System.out.printf("%d и %d в разряде \"единицы\"\n", onesC, onesD);
             }
         } else {
-            System.out.println("К сожалению, одинаковых цифр в разрядах у указанных чисел нет");
+            System.out.println("К сожалению, одинаковых цифр в разрядах у указанных чисел нет\n");
         }
 
-        System.out.println("\n\n5. Определение символа по его коду");
+        System.out.println("\n5. Определение символа по его коду");
 
         char symbol = '\u0057';
         if (symbol >= '0' && symbol <= '9') {
@@ -107,23 +107,18 @@ public class IfElseStatementTheme {
         System.out.println("\n6. Подсчет суммы вклада и начисленных банком %");
 
         int depositAmount = 301_000;
-        int bankCharge = 0;
-        int interestCharge = 0;
+        int bankCharge = 5;
         if (depositAmount > 300_000) {
             bankCharge = 10;
-            interestCharge = (depositAmount / 100) * bankCharge;
         } else if (depositAmount >= 100_000 && depositAmount <= 300_000) {
             bankCharge = 7;
-            interestCharge = (depositAmount / 100) * bankCharge;
-        } else if (depositAmount < 100_000) {
-            bankCharge = 5;
-            interestCharge = (depositAmount / 100) * bankCharge;
         }
+        int interestCharge = (depositAmount / 100) * bankCharge;
         System.out.println("Сумма вклада " + depositAmount +
                 "\nСумма начисленного % " + interestCharge +
                 "\nИтоговая сумма " + (interestCharge + depositAmount));
 
-        System.out.println("\n7. Определение оценки по предметам");
+        System.out.println("\n7. Определение оценки по предметам\n");
 
         int historyPercent = 59;
         int historyScore = 2;
@@ -152,12 +147,12 @@ public class IfElseStatementTheme {
         int salesMonth = 13_000;
         int rentMonth = 5_000;
         int productionCostMonth = 9_000;
-        int profit = salesMonth * 12 - (productionCostMonth * 12 + rentMonth * 12);
+        int profit = salesMonth * 12 - (productionCostMonth + rentMonth ) * 12;
+        System.out.print("Прибыль за год: ");
         if (profit <= 0) {
-            System.out.printf("Прибыль за год: %d руб.\n", profit);
-        } 
-        if (profit > 0) {
-            System.out.printf("Прибыль за год: +%d руб.\n", profit);
+            System.out.printf("%d руб.\n", profit);
+        } else {
+            System.out.printf("+%d руб.\n", profit);
         }
     }
 }
